@@ -1,0 +1,478 @@
+/* >>>>>>>>> Resting CSS <<<<<<<< */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+*::selection {
+	background-color: var(--main-text);
+	color: var(--L-side-bg);
+}
+::-webkit-scrollbar {
+	background-color: var(--L-side-bg);
+	width: 12px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--main-text);
+	border-radius: 3rem;
+}
+
+/* >>>>>>>>> font-size seting 1rem = 10px <<<<<<<< */
+
+html {
+	font-size: 62.5%;
+}
+
+/* >>>>>>>>> Remove List Style <<<<<<<< */
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* >>>>>>Remove default hyperlink styles <<<<<<<<< */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Add a default cursor for clickable elements */
+
+a,
+button {
+	cursor: pointer;
+}
+
+/* >>>>>>>>> Variable <<<<<<<< */
+
+:root {
+	--L-side-bg: #191c27;
+	--body-bg: #292d3a;
+	--main-text: #caa409;
+	--other-text-color: #9e9d98;
+	--text-color: white;
+	--btn-glow: cyan;
+}
+
+/* -------------- Common CSS Classes ----------- */
+
+/* ___ For Section Heading  */
+.section-heading {
+	font-size: 4.5rem;
+	font-weight: 500;
+	text-align: center;
+	padding: 20px 0px;
+	color: var(--other-text-color);
+}
+
+/* <<<<< Common Flex box >>>>>> */
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* common class for buttos  */
+
+.btns {
+	display: inline-block;
+	padding: 12px 30px;
+	margin-top: 20px;
+	background-color: var(--L-side-bg);
+	border-radius: 10rem;
+	font-size: 1.9rem;
+	font-weight: 700;
+	color: var(--other-text-color);
+	margin-right: 10px;
+	transition: ease all 1s;
+}
+
+/* >>> Hover Effect <<<< */
+
+.btns:hover {
+	background-color: var(--main-text);
+	color: black;
+	box-shadow: 1px 1px 20px cyan;
+}
+
+/* common class for span tag  */
+
+span {
+	color: var(--main-text);
+}
+
+/* common line for heading  */
+
+.line {
+	width: 60%;
+	height: 5px;
+	background-color: var(--L-side-bg);
+	cursor: pointer;
+	margin: 0px auto;
+}
+.overline {
+	width: 30%;
+	height: 100%;
+	background-color: var(--main-text);
+	animation-name: run-line;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+/* animation for line  */
+@keyframes run-line {
+	from {
+		width: 30%;
+		background-color: var(--main-text);
+	}
+	to {
+		width: 50%;
+		background-color: var(--other-text-color);
+	}
+}
+
+/* >>>>>>>>> CSS for main page <<<<<<<< */
+
+body {
+	background-color: var(--body-bg);
+	overflow-x: hidden;
+}
+
+/* --------------------------------------------------
+			main page CSS styleing start
+---------------------------------- -------------------*/
+
+main {
+	width: 100%;
+	height: 100vh;
+}
+
+/* <<<<<< style for Left side navbar >>>>> */
+
+.left {
+	width: 330px;
+	height: 100%;
+	background-color: var(--L-side-bg);
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	transition: ease all 1s;
+}
+.image {
+	width: 200px;
+	height: 200px;
+	background-image: url("mypic.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	border: 8px solid var(--body-bg);
+	box-shadow: 2px 2px 18px var(--main-text);
+}
+
+.name {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--main-text);
+	margin-top: 10px;
+	letter-spacing: -1px;
+}
+.title {
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--other-text-color);
+	letter-spacing: -1px;
+	margin-top: 3px;
+}
+ul li a {
+	display: block;
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--text-color);
+	background-color: var(--body-bg);
+	padding: 13px 100px;
+	border-radius: 100px;
+	text-align: center;
+	margin-top: 12px;
+	transition: ease all 0.9s;
+	text-transform: uppercase;
+}
+ul li a:hover {
+	background-color: var(--main-text);
+}
+#mobile-nav {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	display: none;
+}
+
+#mobile-nav i {
+	font-size: 2.5rem;
+	color: var(--L-side-bg);
+	background-color: var(--other-text-color);
+	padding: 6px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	opacity: 10005;
+}
+/* <<<< End Left side navbar >>>>>> */
+
+/* ------Right side body section ---- */
+
+/* <<<<<< Styling for right side all pages >>>>>> */
+
+.right {
+	width: 100%;
+	height: 100vh;
+	padding-left: 40rem;
+	padding-right: 2rem;
+}
+
+/* <<<<< Styling for home page >>>>> */
+
+#home {
+	width: 100%;
+	height: 100vh;
+	flex-direction: column;
+}
+.hi {
+	font-size: 3rem;
+	color: var(--text-color);
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+.h-name {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--text-color);
+}
+.h-name span {
+	font-size: 5.5rem;
+	color: var(--main-text);
+}
+.h-para {
+	font-size: 1.9rem;
+	line-height: 2.8rem;
+	color: var(--other-text-color);
+	padding-top: 2rem;
+	margin-right: 12rem;
+}
+/* <<<<< Styling top Social media links >>>>> */
+.social-meida-links {
+	text-align: center;
+	gap: 15px;
+	position: fixed;
+	bottom: 15px;
+	right: 40px;
+}
+.social-meida-links i {
+	font-size: 23px;
+	padding: 10px 10px;
+	border-radius: 50%;
+	background-color: var(--L-side-bg);
+	color: var(--text-color);
+	cursor: pointer;
+	transition: ease all 0.4s;
+}
+.social-meida-links i:hover {
+	background-color: var(--main-text);
+	color: black;
+	transform: rotate(360deg);
+	box-shadow: 1px 1px 15px var(--btn-glow);
+}
+
+/* <<<<< Styling for About page >>>>> */
+
+#about {
+	width: 100%;
+	/* height: 100vh; */
+	margin-bottom: 20rem;
+}
+.about-content {
+	flex-direction: column;
+}
+.myIntorduction {
+	margin-top: 5rem;
+	margin-right: 8rem;
+	margin-left: 5rem;
+}
+.buttons {
+	margin-top: 30px;
+	letter-spacing: -1.5px;
+}
+.about-para {
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 3.2rem;
+	color: var(--text-color);
+}
+
+/* <<<<< Styling for Education page >>>>> */
+
+#skills {
+	width: 100%;
+}
+.skill-cards {
+	flex-direction: column;
+}
+
+.skill-card {
+	margin: 40px 0px;
+}
+.skill-name {
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: var(--text-color);
+	margin: 1.5rem;
+}
+
+.skill-line {
+	width: 50%;
+	height: 20px;
+	background-color: var(--text-color);
+	border-radius: 4px;
+}
+#html-line {
+	width: 90%;
+	height: 100%;
+	background-color: var(--main-text);
+}
+#css-line {
+	width: 92%;
+	height: 100%;
+	background-color: var(--main-text);
+}
+#bootstrap-line {
+	width: 80%;
+	height: 100%;
+	background-color: var(--main-text);
+}
+#tailwind-line {
+	width: 70%;
+	height: 100%;
+	background-color: var(--main-text);
+}
+#js-line {
+	width: 70%;
+	height: 100%;
+	background-color: var(--main-text);
+}
+
+/* <<<<< Styling for Project page >>>>> */
+
+#project {
+	width: 100%;
+}
+.project-cards {
+	padding: 2px 0px;
+	margin-top: 30px;
+	flex-wrap: wrap;
+}
+.p-card {
+	width: 28.5rem;
+	height: 16rem;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px var(--main-text);
+}
+
+.p-card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: ease all 0.3s;
+}
+.p-card:hover img {
+	transform: scale(1.089);
+}
+
+.porject-summary {
+	font-size: 1.9rem;
+	font-weight: 400;
+	color: var(--other-text-color);
+	text-align: center;
+	margin-top: 3.5rem;
+}
+
+/* <<<<< Styling for contact page page >>>>> */
+
+#contact {
+	width: 100%;
+	height: 100vh;
+}
+.contact-content {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.form-inputs {
+	flex-direction: column;
+}
+.form {
+	width: 55%;
+	background-color: var(--L-side-bg);
+	padding: 2rem 1rem;
+	border-radius: 8px;
+}
+.form-inputs input {
+	width: 98%;
+	height: 4rem;
+	outline: 0;
+	border: 0;
+	margin-top: 12px;
+	padding: 0 10px;
+	background-color: var(--body-bg);
+	border-radius: 4px;
+	font-size: 1.8rem;
+}
+textarea {
+	width: 98%;
+	height: 10rem;
+	outline: 0;
+	border: 0;
+	margin-top: 12px;
+	padding: 10px 10px;
+	background-color: var(--body-bg);
+	border-radius: 4px;
+	font-size: 1.8rem;
+}
+
+.form-inputs > button {
+	border: 0;
+	background-color: var(--body-bg);
+}
+.info-heading {
+	font-size: 4rem;
+	font-weight: 500;
+	color: var(--text-color);
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	margin: 2rem 0px;
+}
+.con-info {
+	font-size: 2rem;
+	color: var(--other-text-color);
+	font-weight: 400;
+	margin-top: 1rem;
+	text-align: start;
+}
+.con-info i {
+	color: var(--main-text);
+}
