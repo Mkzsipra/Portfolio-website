@@ -2,7 +2,7 @@
 
 function typeName() {
 	let myName = document.querySelector(".myName");
-	let name = "Kaleem Sipra";
+	let name = "Fornt End Developer";
 	let index = 0;
 	function typeWriter() {
 		let newMainHeading = name.slice(0, index);
